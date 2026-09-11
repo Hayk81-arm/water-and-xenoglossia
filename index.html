@@ -3,54 +3,503 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Вода и ксеноглоссия — Айк Самвелович Харатян</title>
+
+<meta name="description"
+content="Вода и ксеноглоссия — книга Айка Самвеловича Харатиана. Личный опыт, наблюдения, размышления и вопросы. Книга распространяется бесплатно.">
+<meta name="author" content="Айк Самвелович Харатян">
+<meta name="robots" content="index, follow">
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#071d2b;font-family:Arial,sans-serif;color:#183746}
-.page{min-height:100vh;display:flex;justify-content:center;padding:24px 14px 40px}
-.card{width:min(1000px,100%);background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.28)}
-.cover{width:100%;display:block;height:auto}
-.actions{padding:28px 22px 32px;text-align:center;background:#f7fbfc}
-.buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-.button{
- display:inline-flex;align-items:center;justify-content:center;
- min-width:260px;min-height:58px;padding:15px 25px;border-radius:14px;
- text-decoration:none;font-size:17px;font-weight:700;
- box-shadow:0 7px 18px rgba(20,70,85,.16);
- transition:transform .15s,box-shadow .15s;
+*{
+  box-sizing:border-box;
 }
-.button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,70,85,.22)}
-.read{background:#236f86;color:#fff}
-.download{background:#e5f3f6;color:#205c6d;border:2px solid #9bcbd5}
-.small{margin:18px 0 0;font-size:14px;color:#728791}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at top, #123b50 0%, #071d2b 55%, #04131d 100%);
+  font-family:Arial, Helvetica, sans-serif;
+  color:#183746;
+  line-height:1.6;
+}
+
+.page{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:30px 15px 50px;
+}
+
+.card{
+  width:min(1000px,100%);
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 20px 70px rgba(0,0,0,.32);
+}
+
+/* HEADER */
+
+.header{
+  background:linear-gradient(135deg,#0b3042,#1d667c);
+  color:#fff;
+  text-align:center;
+  padding:34px 20px 30px;
+}
+
+.header h1{
+  margin:0;
+  font-size:clamp(30px,5vw,48px);
+  font-weight:700;
+  letter-spacing:.3px;
+}
+
+.header .author{
+  margin:8px 0 0;
+  font-size:18px;
+  opacity:.92;
+}
+
+.header .subtitle{
+  margin:12px auto 0;
+  max-width:700px;
+  font-size:14px;
+  opacity:.78;
+}
+
+/* COVER */
+
+.cover-wrap{
+  background:#edf6f8;
+  padding:25px 20px 10px;
+  text-align:center;
+}
+
+.cover{
+  display:block;
+  width:100%;
+  max-width:900px;
+  height:auto;
+  margin:0 auto;
+  border-radius:12px;
+  box-shadow:0 10px 35px rgba(0,0,0,.18);
+}
+
+/* ACTIONS */
+
+.actions{
+  padding:30px 22px 35px;
+  text-align:center;
+  background:#f7fbfc;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:250px;
+  min-height:58px;
+  padding:15px 25px;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:700;
+  box-shadow:0 7px 18px rgba(20,70,85,.16);
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease,
+    background .15s ease;
+}
+
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(20,70,85,.24);
+}
+
+.read{
+  background:#236f86;
+  color:#fff;
+}
+
+.read:hover{
+  background:#1d6175;
+}
+
+.download{
+  background:#e5f3f6;
+  color:#205c6d;
+  border:2px solid #9bcbd5;
+}
+
+.download:hover{
+  background:#d8edf1;
+}
+
+.free{
+  margin:20px 0 0;
+  color:#607983;
+  font-size:14px;
+}
+
+/* CONTENT */
+
+.content{
+  padding:42px 35px;
+  background:#fff;
+}
+
+.section{
+  max-width:780px;
+  margin:0 auto 42px;
+}
+
+.section:last-child{
+  margin-bottom:0;
+}
+
+.section h2{
+  margin:0 0 15px;
+  color:#205c6d;
+  font-size:28px;
+}
+
+.section p{
+  margin:0 0 14px;
+  font-size:16px;
+  color:#405963;
+}
+
+.quote{
+  margin:25px 0;
+  padding:20px 24px;
+  border-left:4px solid #6faebd;
+  background:#f2f8fa;
+  border-radius:0 12px 12px 0;
+  color:#355763;
+  font-style:italic;
+}
+
+/* LANGUAGE */
+
+.language{
+  text-align:center;
+  padding:25px 20px;
+  background:#eef7f9;
+}
+
+.language-title{
+  margin:0 0 13px;
+  font-size:14px;
+  color:#657e87;
+}
+
+.lang-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.lang{
+  display:inline-block;
+  padding:9px 18px;
+  border:1px solid #a7cbd3;
+  border-radius:20px;
+  text-decoration:none;
+  color:#205c6d;
+  font-size:14px;
+  font-weight:700;
+  background:#fff;
+}
+
+.lang:hover{
+  background:#dceff3;
+}
+
+/* FOOTER */
+
+.footer{
+  padding:25px 20px 30px;
+  text-align:center;
+  background:#092535;
+  color:#c5d9df;
+}
+
+.footer strong{
+  color:#fff;
+}
+
+.footer p{
+  margin:5px 0;
+  font-size:13px;
+}
+
+.footer a{
+  color:#b9e2eb;
+  text-decoration:none;
+}
+
+.footer a:hover{
+  text-decoration:underline;
+}
+
+/* MOBILE */
+
 @media(max-width:600px){
- .page{padding:0 0 25px}
- .card{border-radius:0}
- .actions{padding:22px 16px 28px}
- .button{width:100%;min-width:0}
+
+  .page{
+    padding:0 0 25px;
+  }
+
+  .card{
+    border-radius:0;
+  }
+
+  .header{
+    padding:28px 18px 25px;
+  }
+
+  .header h1{
+    font-size:32px;
+  }
+
+  .header .author{
+    font-size:16px;
+  }
+
+  .cover-wrap{
+    padding:12px 10px 5px;
+  }
+
+  .cover{
+    border-radius:6px;
+  }
+
+  .actions{
+    padding:25px 16px 30px;
+  }
+
+  .button{
+    width:100%;
+    min-width:0;
+  }
+
+  .content{
+    padding:35px 20px;
+  }
+
+  .section h2{
+    font-size:24px;
+  }
+
+  .section p{
+    font-size:15px;
+  }
 }
 </style>
 </head>
+
 <body>
+
 <div class="page">
-  <main class="card">
-    <img class="cover" src="book-design.png" alt="Вода и ксеноглоссия — книга Айка Самвеловича Харатиана">
-    <section class="actions">
-      <div class="buttons">
-        <a class="button read"
-           href="https://drive.google.com/file/d/1-JpAtKLOSojDleMAgPE8a4ZMdjtABBrJ/view?usp=sharing"
-           target="_blank" rel="noopener noreferrer">
-          📖&nbsp; ЧИТАТЬ ОНЛАЙН
-        </a>
-        <a class="button download"
-           href="https://drive.google.com/uc?export=download&amp;id=1-JpAtKLOSojDleMAgPE8a4ZMdjtABBrJ"
-           target="_blank" rel="noopener noreferrer">
-          ⬇️&nbsp; СКАЧАТЬ БЕСПЛАТНО
-        </a>
+
+<main class="card">
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <h1>Вода и ксеноглоссия</h1>
+
+    <div class="author">
+      Айк Самвелович Харатян
+    </div>
+
+    <div class="subtitle">
+      Личный опыт • Наблюдение • Вопрос
+    </div>
+
+  </header>
+
+
+  <!-- COVER -->
+
+  <div class="cover-wrap">
+
+    <img
+      class="cover"
+      src="book-design.png"
+      alt="Обложка книги «Вода и ксеноглоссия» — Айк Самвелович Харатян"
+    >
+
+  </div>
+
+
+  <!-- BUTTONS -->
+
+  <section class="actions">
+
+    <div class="buttons">
+
+      <a
+        class="button read"
+        href="https://drive.google.com/file/d/1-JpAtKLOSojDleMAgPE8a4ZMdjtABBrJ/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📖&nbsp; ЧИТАТЬ ОНЛАЙН
+      </a>
+
+      <a
+        class="button download"
+        href="https://drive.google.com/uc?export=download&amp;id=1-JpAtKLOSojDleMAgPE8a4ZMdjtABBrJ"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ⬇️&nbsp; СКАЧАТЬ БЕСПЛАТНО
+      </a>
+
+    </div>
+
+    <p class="free">
+      Книга распространяется бесплатно.
+    </p>
+
+  </section>
+
+
+  <!-- DESCRIPTION -->
+
+  <section class="content">
+
+    <div class="section">
+
+      <h2>О книге</h2>
+
+      <p>
+        «Вода и ксеноглоссия» — книга, основанная на личном опыте,
+        многолетних наблюдениях, размышлениях и вопросах автора.
+      </p>
+
+      <p>
+        Автор исследует связь между водой, памятью, информацией,
+        человеческим организмом и явлением, которое он называет
+        ксеноглоссией.
+      </p>
+
+      <p>
+        Эта работа не претендует на статус научного доказательства.
+        Это попытка поделиться личными наблюдениями и поставить вопросы,
+        которые автор считает важными для дальнейшего размышления и исследования.
+      </p>
+
+      <div class="quote">
+        «Знание, которое человек получает, должно быть доступно другим,
+        чтобы каждый мог самостоятельно думать, наблюдать и задавать вопросы».
       </div>
-      <p class="small">Книга распространяется бесплатно.</p>
-    </section>
-  </main>
+
+    </div>
+
+
+    <!-- AUTHOR -->
+
+    <div class="section">
+
+      <h2>Об авторе</h2>
+
+      <p>
+        <strong>Айк Самвелович Харатян</strong> — автор,
+        инженер и исследователь, который на протяжении многих лет
+        наблюдает и записывает собственные идеи, опыт и размышления
+        о воде и человеческом сознании.
+      </p>
+
+      <p>
+        В этой книге он представляет личный взгляд на вопросы,
+        которые сформировались в результате многолетних наблюдений.
+      </p>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+
+    <div class="section">
+
+      <h2>Важное замечание</h2>
+
+      <p>
+        Материалы книги отражают личный опыт, наблюдения,
+        предположения и вопросы автора.
+      </p>
+
+      <p>
+        Книга не заменяет научные исследования, медицинские,
+        психологические или иные профессиональные рекомендации.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- LANGUAGES -->
+
+  <section class="language">
+
+    <p class="language-title">
+      Язык книги
+    </p>
+
+    <div class="lang-buttons">
+
+      <a class="lang" href="#">
+        🇷🇺 Русский
+      </a>
+
+      <a class="lang" href="#">
+        🇬🇧 English
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <p>
+      <strong>Вода и ксеноглоссия</strong>
+    </p>
+
+    <p>
+      © Айк Самвелович Харатян
+    </p>
+
+    <p>
+      Книга предоставляется читателям бесплатно.
+    </p>
+
+  </footer>
+
+</main>
+
 </div>
+
 </body>
 </html>
