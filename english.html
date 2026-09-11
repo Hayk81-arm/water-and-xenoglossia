@@ -2,254 +2,508 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water and Xenoglossia — Hayk Samvelovich Kharatyan</title>
 
-  <title>Water and Xenoglossia — Hayk Samvelovich Kharatyan</title>
+<meta name="description"
+content="Water and Xenoglossia — a book by Hayk Samvelovich Kharatyan. Personal experience, observations, reflections and questions. The book is distributed free of charge.">
 
-  <meta name="description"
-        content="Water and Xenoglossia — personal experience, observations and reflections by Hayk Samvelovich Kharatyan. Free worldwide reading and download.">
+<meta name="author" content="Hayk Samvelovich Kharatyan">
+<meta name="robots" content="index, follow">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: #f5f7fa;
-      color: #1f2933;
-      line-height: 1.7;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-      text-align: center;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .lang-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at top, #123b50 0%, #071d2b 55%, #04131d 100%);
+  font-family:Arial, Helvetica, sans-serif;
+  color:#183746;
+  line-height:1.6;
+}
 
-    .lang {
-      display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid #cbd5e1;
-      border-radius: 20px;
-      text-decoration: none;
-      color: #334155;
-      background: white;
-      font-size: 14px;
-    }
+.page{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:30px 15px 50px;
+}
 
-    .lang:hover {
-      background: #eef2f7;
-    }
+.card{
+  width:min(1000px,100%);
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 20px 70px rgba(0,0,0,.32);
+}
 
-    .cover {
-      width: 100%;
-      max-width: 430px;
-      height: auto;
-      display: block;
-      margin: 0 auto 35px;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
+/* HEADER */
 
-    h1 {
-      font-size: 38px;
-      margin: 20px 0 10px;
-      color: #17202a;
-    }
+.header{
+  background:linear-gradient(135deg,#0b3042,#1d667c);
+  color:#fff;
+  text-align:center;
+  padding:34px 20px 30px;
+}
 
-    .author {
-      font-size: 21px;
-      margin-bottom: 30px;
-      color: #475569;
-    }
+.header h1{
+  margin:0;
+  font-size:clamp(30px,5vw,48px);
+  font-weight:700;
+  letter-spacing:.3px;
+}
 
-    .description {
-      max-width: 720px;
-      margin: 0 auto 30px;
-      font-size: 18px;
-      text-align: left;
-    }
+.header .author{
+  margin:8px 0 0;
+  font-size:18px;
+  opacity:.92;
+}
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 30px 0;
-    }
+.header .subtitle{
+  margin:12px auto 0;
+  max-width:700px;
+  font-size:14px;
+  opacity:.78;
+}
 
-    .button {
-      display: inline-block;
-      padding: 14px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 16px;
-    }
+/* COVER */
 
-    .read {
-      background: #1f4e79;
-      color: white;
-    }
+.cover-wrap{
+  background:#edf6f8;
+  padding:25px 20px 10px;
+  text-align:center;
+}
 
-    .download {
-      background: #2e7d32;
-      color: white;
-    }
+.cover{
+  display:block;
+  width:100%;
+  max-width:900px;
+  height:auto;
+  margin:0 auto;
+  border-radius:12px;
+  box-shadow:0 10px 35px rgba(0,0,0,.18);
+}
 
-    .button:hover {
-      opacity: 0.88;
-    }
+/* ACTIONS */
 
-    .disclaimer {
-      max-width: 720px;
-      margin: 40px auto 0;
-      padding: 20px;
-      background: white;
-      border-left: 4px solid #94a3b8;
-      text-align: left;
-      font-size: 15px;
-      color: #475569;
-    }
+.actions{
+  padding:30px 22px 35px;
+  text-align:center;
+  background:#f7fbfc;
+}
 
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #64748b;
-    }
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 30px;
-      }
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:250px;
+  min-height:58px;
+  padding:15px 25px;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:700;
+  box-shadow:0 7px 18px rgba(20,70,85,.16);
+  transition:transform .15s ease,
+             box-shadow .15s ease,
+             background .15s ease;
+}
 
-      .author {
-        font-size: 18px;
-      }
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(20,70,85,.24);
+}
 
-      .description {
-        font-size: 16px;
-      }
+.read{
+  background:#236f86;
+  color:#fff;
+}
 
-      .button {
-        width: 100%;
-        max-width: 320px;
-      }
-    }
-  </style>
+.read:hover{
+  background:#1d6175;
+}
+
+.download{
+  background:#e5f3f6;
+  color:#205c6d;
+  border:2px solid #9bcbd5;
+}
+
+.download:hover{
+  background:#d8edf1;
+}
+
+.free{
+  margin:20px 0 0;
+  color:#607983;
+  font-size:14px;
+}
+
+/* CONTENT */
+
+.content{
+  padding:42px 35px;
+  background:#fff;
+}
+
+.section{
+  max-width:780px;
+  margin:0 auto 42px;
+}
+
+.section:last-child{
+  margin-bottom:0;
+}
+
+.section h2{
+  margin:0 0 15px;
+  color:#205c6d;
+  font-size:28px;
+}
+
+.section p{
+  margin:0 0 14px;
+  font-size:16px;
+  color:#405963;
+}
+
+.quote{
+  margin:25px 0;
+  padding:20px 24px;
+  border-left:4px solid #6faebd;
+  background:#f2f8fa;
+  border-radius:0 12px 12px 0;
+  color:#355763;
+  font-style:italic;
+}
+
+/* LANGUAGE */
+
+.language{
+  text-align:center;
+  padding:25px 20px;
+  background:#eef7f9;
+}
+
+.language-title{
+  margin:0 0 13px;
+  font-size:14px;
+  color:#657e87;
+}
+
+.lang-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.lang{
+  display:inline-block;
+  padding:9px 18px;
+  border:1px solid #a7cbd3;
+  border-radius:20px;
+  text-decoration:none;
+  color:#205c6d;
+  font-size:14px;
+  font-weight:700;
+  background:#fff;
+}
+
+.lang:hover{
+  background:#dceff3;
+}
+
+/* FOOTER */
+
+.footer{
+  padding:25px 20px 30px;
+  text-align:center;
+  background:#092535;
+  color:#c5d9df;
+}
+
+.footer strong{
+  color:#fff;
+}
+
+.footer p{
+  margin:5px 0;
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .page{
+    padding:0 0 25px;
+  }
+
+  .card{
+    border-radius:0;
+  }
+
+  .header{
+    padding:28px 18px 25px;
+  }
+
+  .header h1{
+    font-size:32px;
+  }
+
+  .header .author{
+    font-size:16px;
+  }
+
+  .cover-wrap{
+    padding:12px 10px 5px;
+  }
+
+  .cover{
+    border-radius:6px;
+  }
+
+  .actions{
+    padding:25px 16px 30px;
+  }
+
+  .button{
+    width:100%;
+    min-width:0;
+  }
+
+  .content{
+    padding:35px 20px;
+  }
+
+  .section h2{
+    font-size:24px;
+  }
+
+  .section p{
+    font-size:15px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="page">
 
-    <!-- Language selection -->
-    <div class="lang-buttons">
-      <a class="lang" href="index.html">
-        🇷🇺 Русский
-      </a>
+  <main class="card">
 
-      <a class="lang" href="english.html">
-        🇬🇧 English
-      </a>
-    </div>
+    <!-- HEADER -->
 
-    <!-- Book cover -->
-    <img
-      class="cover"
-      src="Обложка%20EN.png"
-      alt="Water and Xenoglossia — book by Hayk Samvelovich Kharatyan"
-    >
+    <header class="header">
 
-    <!-- Book title -->
-    <h1>Water and Xenoglossia</h1>
+      <h1>Water and Xenoglossia</h1>
 
-    <div class="author">
-      Hayk Samvelovich Kharatyan
-    </div>
+      <div class="author">
+        Hayk Samvelovich Kharatyan
+      </div>
 
-    <!-- Description -->
-    <div class="description">
+      <div class="subtitle">
+        Personal Experience • Observation • Question
+      </div>
 
-      <p>
-        <strong>Water and Xenoglossia</strong> is a personal exploration
-        based on many years of observations, experiences, thoughts and questions.
-      </p>
+    </header>
 
-      <p>
-        The author examines the possible relationship between water,
-        information, memory, human consciousness and the phenomenon he calls
-        xenoglossia.
-      </p>
 
-      <p>
-        This book does not present scientific proof or claim to provide
-        established scientific conclusions. It is a personal record of
-        experience, observation and reflection, offered openly for readers
-        around the world.
-      </p>
+    <!-- COVER -->
 
-    </div>
+    <div class="cover-wrap">
 
-    <!-- Book buttons -->
-    <div class="buttons">
-
-      <a
-        class="button read"
-        href="https://drive.google.com/file/d/1bN79UO1FdSqmnqianTImrH2VoNFbfiFu/view?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer"
+      <img
+        class="cover"
+        src="Обложка%20EN.png"
+        alt="Water and Xenoglossia — book by Hayk Samvelovich Kharatyan"
       >
-        📖&nbsp; READ ONLINE
-      </a>
-
-      <a
-        class="button download"
-        href="https://drive.google.com/uc?export=download&amp;id=1bN79UO1FdSqmnqianTImrH2VoNFbfiFu"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ⬇️&nbsp; DOWNLOAD FREE
-      </a>
 
     </div>
 
-    <!-- Disclaimer -->
-    <div class="disclaimer">
 
-      <strong>Important note</strong>
+    <!-- ACTIONS -->
+
+    <section class="actions">
+
+      <div class="buttons">
+
+        <a
+          class="button read"
+          href="https://drive.google.com/file/d/1bN79UO1FdSqmnqianTImrH2VoNFbfiFu/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📖&nbsp; READ ONLINE
+        </a>
+
+        <a
+          class="button download"
+          href="https://drive.google.com/uc?export=download&amp;id=1bN79UO1FdSqmnqianTImrH2VoNFbfiFu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ⬇️&nbsp; DOWNLOAD FREE
+        </a>
+
+      </div>
+
+      <p class="free">
+        This book is distributed free of charge.
+      </p>
+
+    </section>
+
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+      <!-- ABOUT THE BOOK -->
+
+      <div class="section">
+
+        <h2>About the Book</h2>
+
+        <p>
+          <strong>Water and Xenoglossia</strong> is a book based on
+          personal experience, many years of observations, reflections
+          and questions by the author.
+        </p>
+
+        <p>
+          The author explores possible connections between water,
+          memory, information, the human body and a phenomenon
+          he calls xenoglossia.
+        </p>
+
+        <p>
+          This work does not claim to be scientific proof.
+          It is an attempt to share personal observations and raise
+          questions that the author considers important for further
+          thought and investigation.
+        </p>
+
+        <div class="quote">
+          “Knowledge that a person receives should be available to others,
+          so that everyone can think, observe and ask questions for themselves.”
+        </div>
+
+      </div>
+
+
+      <!-- ABOUT THE AUTHOR -->
+
+      <div class="section">
+
+        <h2>About the Author</h2>
+
+        <p>
+          <strong>Hayk Samvelovich Kharatyan</strong> is an author,
+          engineer and independent researcher who has spent many years
+          observing and recording his own ideas, experiences and reflections
+          concerning water and human consciousness.
+        </p>
+
+        <p>
+          In this book, he presents a personal perspective on questions
+          that developed through many years of observation and reflection.
+        </p>
+
+      </div>
+
+
+      <!-- IMPORTANT NOTE -->
+
+      <div class="section">
+
+        <h2>Important Note</h2>
+
+        <p>
+          The material presented in this book reflects the author's
+          personal experience, observations, assumptions and questions.
+          It is not presented as a scientific study or as scientific proof.
+        </p>
+
+        <p>
+          This book does not replace scientific research or professional
+          medical, psychological or other expert advice.
+        </p>
+
+        <p>
+          The purpose of this publication is to share ideas and personal
+          observations freely with readers around the world.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- LANGUAGE -->
+
+    <section class="language">
+
+      <p class="language-title">
+        Book language
+      </p>
+
+      <div class="lang-buttons">
+
+        <a class="lang" href="index.html">
+          🇷🇺 Русский
+        </a>
+
+        <a class="lang" href="english.html">
+          🇬🇧 English
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
 
       <p>
-        This book is a personal work based on the author's experience,
-        observations, notes and questions. It is not presented as a scientific
-        study or as scientific proof.
+        <strong>Water and Xenoglossia</strong>
       </p>
 
       <p>
-        The purpose of this publication is to share ideas and personal
-        observations freely with readers around the world.
+        © Hayk Samvelovich Kharatyan
       </p>
 
-    </div>
+      <p>
+        This book is provided to readers free of charge.
+      </p>
 
-    <footer>
-      © Hayk Samvelovich Kharatyan
     </footer>
 
-  </div>
+  </main>
+
+</div>
 
 </body>
 </html>
